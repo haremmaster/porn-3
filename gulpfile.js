@@ -20,6 +20,8 @@ require('laravel-elixir-vueify');
 elixir(function(mix) {
     mix.sass('app.scss');
 
+    mix.sass('admin.scss');
+
     mix.browserify('admin.js')
     mix.browserify('home.js')
     mix.version(['public/js/admin.js', 'public/js/home.js']);
