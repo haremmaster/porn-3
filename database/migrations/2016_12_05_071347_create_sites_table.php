@@ -14,6 +14,10 @@ class CreateSitesTable extends Migration
     {
         Schema::create('sites', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('sitename');
+            $table->string('url');
+            $table->string('file_name');
+            $table->integer('order');
             $table->timestamps();
         });
     }
