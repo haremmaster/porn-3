@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
+});
+
+Route::group(['prefix' => '/'], function () {
+    Route::get('/{vue_capture?}', function () {
+        return view('index');
+    })->where('vue_capture', '[\/\w\.-]*');
 });
